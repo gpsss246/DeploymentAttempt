@@ -1,7 +1,8 @@
 {
-  "name": "mock-eyoon20-gsingh32",
+  "name": "mock-eyoon20-gsingh32-deployment",
   "version": "22.2.0",
   "description": "Brown CSCI0320 Sprint 3",
+  "homepage": "https://gitname.github.io/DeploymentAttempt",
   "license": "UNLICENSED",
   "dependencies": {
     "@types/node": "^16.11.36",
@@ -21,12 +22,15 @@
     "@types/jest": "^27.5.1",
     "@vitejs/plugin-react": "^4.1.0",
     "eslint": "^8.15.0",
+    "gh-pages": "^6.0.0",
     "vite": "^4.4.10",
     "web-vitals": "^2.1.4"
   },
   "type": "module",
   "scripts": {
     "start": "vite",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "vite build",
     "serve": "vite preview"
   },
